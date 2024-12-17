@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Task4</string>
+    <string name="correct_toast">Верно!</string>
+    <string name="incorrect_toast">Не верно!</string>
+    <string name="true_button">TRUE</string>
+    <string name="false_button">FALSE</string>
+    <string name="next_question_button">Далее</string>
+    <string name="question_android">ОС Android основана на ядре Linux.</string>
+    <string name="question_linear">Разметка LinearLayout позиционирует свои дочерние элементы в
+строки или столбцы.</string>
+    <string name="question_service">Компонент Android-приложения Service предоставляет доступ к
+данным.</string>
+    <string name="question_res"> Ресурсы приложения содержатся в отдельном файле XML.</string>
+    <string name="question_manifest">AndroidManifest.xml предоставляет системе основную
+информацию о программе.</string>
+
+    <string name="question_java">Android поддерживает только язык программирования Java.</string>
+    <string name="question_activity">Активность (Activity) в Android используется для управления пользовательским интерфейсом.</string>
+    <string name="question_intent">Intent используется для запуска новых активностей и передачи данных между ними.</string>
+    <string name="question_fragment">Фрагменты (Fragments) могут быть использованы для создания многооконного интерфейса.</string>
+    <string name="question_sqlite">Android поддерживает встроенную базу данных SQLite для хранения данных.</string>
+
+    <string name="score">Счет:</string>
+</resources>
