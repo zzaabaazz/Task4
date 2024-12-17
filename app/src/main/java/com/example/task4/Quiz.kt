@@ -32,6 +32,7 @@ Question(R.string.question_java, false),
 
     companion object { //статическая переменная
         private const val KEY_INDEX = "index"
+        private const val KEY_SCORE = "score"
     }
     private fun updateQuestion() {
         question = mQuestionBank[mCurrentIndex].getTextResId()
@@ -70,6 +71,8 @@ Question(R.string.question_java, false),
         }
         savedInstanceState?.let {
             mCurrentIndex = it.getInt(KEY_INDEX, 0)
+            score = it.getInt(KEY_SCORE, 0)
+            txtScore.text = score.toString()
         }
         mQuestionTextView = findViewById<TextView>(R.id.question_text_view)
         question = mQuestionBank[mCurrentIndex].getTextResId()
@@ -98,22 +101,16 @@ Question(R.string.question_java, false),
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt(KEY_INDEX, mCurrentIndex)
+        outState.putInt(KEY_SCORE, score)
     }
     private fun checkAnswer(userPressedTrue: Boolean) {
         val answerIsTrue: Boolean = mQuestionBank[mCurrentIndex].getAnswer()
         var messageResId = 0
         if (userPressedTrue == answerIsTrue) {
             messageResId = R.string.correct_toast
-            incrementScore()
+            score++
         } else messageResId = R.string.incorrect_toast
         Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show()
 
     }
-
-    private fun incrementScore() {
-        score +=1
-    }
-
-
-
 }
